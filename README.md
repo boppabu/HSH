@@ -1,6 +1,6 @@
 # HighScoreHunt Website
 
-A modern, minimalist website project with styling inspired by doublepoint.com, featuring a clean purple color scheme and responsive design.
+A modern, minimalist website project, featuring a clean purple color scheme and responsive design.
 
 ## Features
 
