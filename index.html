@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIGH SCORE HUNT - Das VR-Turnier 2025</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Particle Network Canvas with Perlin Noise -->
+    <canvas id="particleCanvas" class="particle-network-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="#" class="logo">HIGH SCORE HUNT</a>
+            </div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#tournament">Das Turnier</a>
+                <a href="#locations">Arenas</a>
+                <a href="#organizers">Veranstalter</a>
+                <a href="#sponsors">Partner</a>
+                <a href="#rules">Regeln</a>
+            </div>
+            <div class="nav-cta">
+                <a href="#register" class="btn-primary">Jetzt Anmelden</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Orbiting Keys Animation -->
+                <div class="orbiting-keys">
+                    <div class="orbit-center">
+                        <img src="assets/HSH Logos/HSH Logo - NEU.png" alt="HSH Logo" class="center-logo">
+                    </div>
+                    <div class="key-orbit key-orbit-1">
+                        <img src="assets/HSH Logos/Schlüssel Gold NEU.png" alt="Gold Key" class="key-icon">
+                    </div>
+                    <div class="key-orbit key-orbit-2">
+                        <img src="assets/HSH Logos/Silber Schlüssel.png" alt="Silver Key" class="key-icon">
+                    </div>
+                    <div class="key-orbit key-orbit-3">
+                        <img src="assets/HSH Logos/Schlüssel Bronze.png" alt="Bronze Key" class="key-icon">
+                    </div>
+                </div>
+
+                <div class="event-date">Das VR-Turnier 2025 | Preisgeld i.H.v 10.000 Euro</div>
+                <h1 class="hero-title">ARE YOU READY<br>PLAYERS ??</h1>
+                <p class="hero-subtitle">Die High Score Hunt – Das ultimative VR-Event – Das weltweit erste VR-Turnier seiner Art, bei dem die Spieler im reinen PVE-Modus gegeneinander antreten, um sich einen Platz auf dem Scoreboard zu sichern.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">VR Arenas</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10.000€</div>
+                        <div class="stat-label">Preisgeld</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Schlüssel</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">1</div>
+                        <div class="stat-label">Wildcard</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#locations" class="btn-primary">Standorte Ansehen</a>
+                    <a href="#tournament" class="btn-secondary">Mehr Erfahren</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HSH2 - Intro Section -->
+    <section id="about" class="hsh-intro">
+        <div class="container">
+            <div class="hsh-intro-content">
+                <h2 class="hsh-intro-title">Die High Score Hunt<br><span class="subtitle-accent">– Das ultimative VR-Event –</span></h2>
+                <p class="hsh-intro-text">Das weltweit erste VR-Turnier seiner Art, bei dem die Spieler im reinen PVE-Modus gegeneinander antreten, um sich einen Platz auf dem Scoreboard zu sichern.</p>
+                <p class="hsh-intro-text">Zeig, was in dir steckt, und erreiche deinen besten High Score in einer der teilnehmenden VR-Arenen in deiner Nähe.</p>
+                <p class="hsh-intro-cta">LASST DIE JAGT AUF DEN HIGH-SCORE BEGINNEN !!!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament Details Section -->
+    <section id="tournament" class="tournament-details">
+        <div class="container">
+            <h2 class="section-title">Wie funktioniert das Turnier?</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-image">
+                        <img src="assets/HSH Logos/Scoreboard Bild.png" alt="Scoreboard">
+                    </div>
+                    <h3>Das Scoreboard</h3>
+                    <p>Sichere dir einen Platz unter den Top 10 für eine Wildcard und kämpfe dich auf das Scoreboard!</p>
+                    <p>Doch nur die besten 3 Spieler aus jeder VR-Arena schaffen den Sprung ins große Finale nach Köln.</p>
+                    <p>Du kannst in jeder teilnehmenden VR-Arena so oft antreten, wie du möchtest – jede neue Session ist eine neue Chance!</p>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">
+                        <img src="assets/HSH Logos/Schlüssel 3.png" alt="Die Schlüssel">
+                    </div>
+                    <h3>Die Schlüssel</h3>
+                    <p>In jeder der 10 teilnehmenden VR-Arenen wurden jeweils 3 Schlüssel für die drei besten Spieler hinterlegt – in Bronze, Silber und Gold.</p>
+                    <p>Diese drei Schlüssel sind die Eintrittskarten für das große Finale in Köln, bei dem alle Schlüsselträger zusammenkommen, um ihren besten High Score abzuliefern.</p>
+                </div>
+                <div class="game-card">
+                    <div class="game-image">
+                        <img src="assets/HSH Logos/Wildcard.png" alt="Wildcard">
+                    </div>
+                    <h3>Die Wildcard</h3>
+                    <p>In jeder der 10 teilnehmenden VR-Arenen wurden 7 Wildcards hinterlegt.</p>
+                    <p><strong>Zu gewinnen:</strong> Meta Quest 3, haptische Feedback-Weste von Truegear sowie viele weitere VR-Arena Gutscheine.</p>
+                    <p>Sollten die Finalisten auf den Plätzen 1–3 nicht erscheinen, rücken die Wildcard-Besitzer entsprechend ihres High Scores nach!</p>
+                    <p><strong>Vorbeikommen lohnt sich!</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HSH8 - Das Finale Section -->
+    <section class="hsh-finale">
+        <div class="container">
+            <div class="hsh-finale-content">
+                <h2 class="hsh-finale-title">Das Finale in Köln<br><span class="subtitle-small">- vor Ort -</span></h2>
+                <h3 class="hsh-finale-subtitle">Mehr als nur ein Wettkampf</h3>
+                <p class="hsh-finale-text"><strong>Die Community:</strong> Erlebe das Finale als Teil einer einzigartigen Community aus Gamern, VR-Enthusiasten, Entwicklern und Tech-Begeisterten.</p>
+                <p class="hsh-finale-text"><strong>Networking:</strong> Triff Gleichgesinnte und komm mit Unternehmen der VR-Branche ins Gespräch.</p>
+                <p class="hsh-finale-text"><strong>Offiziell unterstützt:</strong> Das Event wird vom E-Sport-Verband Deutschland befürwortet – ein bedeutender Meilenstein in der deutschen E-Sport und VR-Landschaft.</p>
+                <p class="hsh-finale-text"><strong>Für dein leibliches Wohl gesorgt:</strong> Snacks und Kaltgetränke vor Ort verfügbar.</p>
+                <p class="hsh-finale-text"><strong>Kostenloser Eintritt für Zuschauer!</strong> Komm vorbei, vernetze dich und werde Teil des VR-Events des Jahres.</p>
+                <p class="hsh-finale-signature">Dein High Score Hunt Team</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- VR Arena Locations Section -->
+    <section id="locations" class="who-attends">
+        <div class="container">
+            <h2 class="section-title">VR Arena Standorte in Deutschland</h2>
+            <div class="attendee-grid">
+                <div class="attendee-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Köln</h3>
+                    <p>VR Arena Köln</p>
+                    <span class="finale-badge">Finale Austragungsort</span>
+                </div>
+                <div class="attendee-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Alsdorf</h3>
+                    <p>VR Arena Alsdorf</p>
+                </div>
+                <div class="attendee-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Troisdorf</h3>
+                    <p>VR Arena Troisdorf</p>
+                </div>
+                <div class="attendee-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Oberhausen</h3>
+                    <p>VR Arena Oberhausen</p>
+                </div>
+                <div class="attendee-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Düsseldorf</h3>
+                    <p>VR Arena Düsseldorf</p>
+                </div>
+                <div class="attendee-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Dortmund Innenstadt-Ost</h3>
+                    <p>VR Arena Dortmund</p>
+                </div>
+                <div class="attendee-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Langenfeld</h3>
+                    <p>VR Arena Langenfeld</p>
+                </div>
+                <div class="attendee-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Unna</h3>
+                    <p>VR Parks Unna</p>
+                </div>
+                <div class="attendee-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Dortmund Brünninghausen</h3>
+                    <p>VR Arena Dortmund</p>
+                </div>
+                <div class="attendee-card">
+                    <div class="location-icon">📍</div>
+                    <h3>Bergisch Gladbach</h3>
+                    <p>VR Arena Bergisch Gladbach</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament System Section -->
+    <!-- <section id="tournament" class="tournament-games">
+        <div class="container">
+            <h2 class="section-title">Das Turnier-System</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-image placeholder-image">📊</div>
+                    <h3>Scoreboard</h3>
+                    <p>Die besten 16 Spieler qualifizieren sich für das Finale</p>
+                    <p>Kämpfe um deinen Platz an der Spitze</p>
+                </div>
+                <div class="game-card">
+                    <div class="game-image placeholder-image">🥉</div>
+                    <h3>Bronzeschlüssel</h3>
+                    <p>Top 3 in jeder Arena</p>
+                    <p>Direkter Weg zum Finale</p>
+                </div>
+                <div class="game-card">
+                    <div class="game-image placeholder-image">🥈</div>
+                    <h3>Silberschlüssel</h3>
+                    <p>Top 2 in jeder Arena</p>
+                    <p>Garantierter Finalplatz</p>
+                </div>
+                <div class="game-card">
+                    <div class="game-image placeholder-image">🥇</div>
+                    <h3>Goldschlüssel</h3>
+                    <p>Arena Champion</p>
+                    <p>Höchste Ehre & Finale-Ticket</p>
+                </div>
+            </div>
+            <div style="margin-top: 60px;">
+                <h3 style="text-align: center; font-size: 2rem; margin-bottom: 20px;">🎴 Wildcard</h3>
+                <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
+                    Eine zusätzliche Chance für Spieler, die knapp das Finale verpasst haben. Die Wildcard wird basierend auf der Gesamtleistung vergeben.
+                </p>
+            </div>
+            <div style="margin-top: 60px; text-align: center;">
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">🏆 Das Finale</h3>
+                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+                    Die Top 16 Spieler treten im großen Finale in <strong>Köln</strong> an, um den Champion zu krönen und das Preisgeld von <strong>10.000 Euro</strong> zu gewinnen!
+                </p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Organizers Section -->
+    <section id="organizers" class="schedule">
+        <div class="container">
+            <h2 class="section-title">Die Veranstalter</h2>
+            <div class="schedule-content" style="max-width: 900px; margin: 0 auto;">
+                <div class="schedule-day" style="text-align: center; margin-bottom: 50px;">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 30px;">🎮 YouTuber & VR-Enthusiasten</h3>
+                    <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 40px;">
+                        Die High Score Hunt wird von zwei leidenschaftlichen VR-YouTubern organisiert, die ihre Liebe zur Virtual Reality mit der Community teilen möchten.
+                    </p>
+                </div>
+                <div class="schedule-items" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px;">
+                    <div style="text-align: center; padding: 30px; background: var(--bg-card); border-radius: 12px; border: 1px solid rgba(0, 212, 255, 0.2);">
+                        <div style="font-size: 4rem; margin-bottom: 20px;">👤</div>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 15px; color: var(--primary-cyan);">Parzival VR</h3>
+                        <p style="font-size: 1.1rem; margin-bottom: 15px;">VR Gaming Content Creator</p>
+                        <a href="mailto:parzival.koop@gmail.de" style="color: var(--primary-magenta); text-decoration: none; font-size: 0.95rem;">parzival.koop@gmail.de</a>
+                    </div>
+                    <div style="text-align: center; padding: 30px; background: var(--bg-card); border-radius: 12px; border: 1px solid rgba(255, 0, 128, 0.2);">
+                        <div style="font-size: 4rem; margin-bottom: 20px;">👤</div>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 15px; color: var(--primary-magenta);">Die Zockstube VR</h3>
+                        <p style="font-size: 1.1rem; margin-bottom: 15px;">VR Gaming Content Creator</p>
+                        <a href="mailto:patrick@diezockstube.de" style="color: var(--primary-cyan); text-decoration: none; font-size: 0.95rem;">patrick@diezockstube.de</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="sponsors">
+        <div class="container">
+            <h2 class="section-title">Unsere Sponsoren</h2>
+            <div class="sponsors-tier">
+                <h3>Premium Partner</h3>
+                <div class="sponsors-grid tier-1">
+                    <div class="sponsor-logo">
+                        <img src="assets/HSH Logos/7th-space- NEU.png" alt="7th-space">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="assets/HSH Logos/Mintgames Neu.png" alt="Mintgames">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="assets/HSH Logos/Timeride Neu.png" alt="Timeride">
+                    </div>
+                </div>
+            </div>
+            <div class="sponsors-tier">
+                <h3>Offizielle Partner</h3>
+                <div class="sponsors-grid tier-2">
+                    <div class="sponsor-logo">
+                        <img src="assets/HSH Logos/ESBD-Logo-360-x-180-400x200.png" alt="ESBD">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="assets/HSH Logos/Virtual Area NEU.png" alt="Virtual Area">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="assets/HSH Logos/Macfly NEU.png" alt="Macfly">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="assets/HSH Logos/Zero_Latency_logo.png" alt="Zero Latency">
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 50px; text-align: center;">
+                <p style="font-size: 1.1rem; color: var(--primary-cyan);">
+                    Vielen Dank an alle unsere Partner für die Unterstützung der High Score Hunt 2025!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="registration">
+        <div class="container">
+            <h2>Melde dich jetzt an!</h2>
+            <p>Sichere dir deinen Platz bei Deutschlands erstem VR-PVE-Turnier</p>
+            <div class="ticket-options">
+                <div class="ticket-card featured">
+                    <div class="featured-badge">Jetzt verfügbar</div>
+                    <h3>Teilnahme</h3>
+                    <div class="price">Kostenlos</div>
+                    <ul>
+                        <li>Teilnahme in einer VR Arena deiner Wahl</li>
+                        <li>Chance auf Goldschlüssel</li>
+                        <li>Chance auf Silberschlüssel</li>
+                        <li>Chance auf Bronzeschlüssel</li>
+                        <li>Platzierung auf dem Scoreboard</li>
+                        <li>10.000 Euro Gesamtpreisgeld</li>
+                    </ul>
+                    <a href="#locations" class="btn-primary">Standort wählen</a>
+                </div>
+            </div>
+            <div style="margin-top: 60px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">Wie funktioniert's?</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    Besuche eine der 10 VR Arenas in ganz Deutschland und nimm am Turnier teil. Kämpfe dich durch die Challenges, sammle Punkte und sichere dir einen der begehrten Schlüssel. Die besten 16 Spieler treffen sich im großen Finale in Köln!
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Rules Summary Section -->
+    <section id="rules" class="rules-summary">
+        <div class="container">
+            <h2 class="section-title">Die Spielregeln</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--text-gray); max-width: 800px; margin: 0 auto 20px auto;">
+                Lies dir die offiziellen Regeln durch, bevor du am Turnier teilnimmst. Mit deiner Anmeldung erkennst du diese Regeln verbindlich an.
+            </p>
+            <div class="rules-grid">
+                <a href="rules.html" class="rules-card">
+                    <div class="rules-icon">👥</div>
+                    <h3>Teilnahmebedingungen</h3>
+                    <p>Mindestalter 16 Jahre. Teilnehmer unter 18 Jahren benötigen eine Einverständniserklärung.</p>
+                    <span class="rules-read-more">Mehr erfahren →</span>
+                </a>
+                <a href="rules.html" class="rules-card">
+                    <div class="rules-icon">🎮</div>
+                    <h3>Ablauf & Spielmechanik</h3>
+                    <p>Spiele Hero Zone oder Vex Arena. Die besten 3 Spieler jeder Arena qualifizieren sich fürs Finale.</p>
+                    <span class="rules-read-more">Mehr erfahren →</span>
+                </a>
+                <a href="rules.html" class="rules-card">
+                    <div class="rules-icon">🏆</div>
+                    <h3>Punktesystem</h3>
+                    <p>Bewertung erfolgt ausschließlich anhand der im Spiel erreichten Punkte.</p>
+                    <span class="rules-read-more">Mehr erfahren →</span>
+                </a>
+                <a href="rules.html" class="rules-card">
+                    <div class="rules-icon">⚖️</div>
+                    <h3>Fair Play & Verhalten</h3>
+                    <p>Betrug, Manipulation oder diskriminierendes Verhalten führen zum sofortigen Ausschluss.</p>
+                    <span class="rules-read-more">Mehr erfahren →</span>
+                </a>
+                <a href="rules.html" class="rules-card">
+                    <div class="rules-icon">🥽</div>
+                    <h3>Ausrüstung & Technik</h3>
+                    <p>VR-Ausrüstung wird gestellt. Eigene Hardware ist nicht erlaubt.</p>
+                    <span class="rules-read-more">Mehr erfahren →</span>
+                </a>
+                <a href="rules.html" class="rules-card">
+                    <div class="rules-icon">📋</div>
+                    <h3>Weitere Regeln</h3>
+                    <p>Haftungsausschluss, Datenschutz, Bild- und Tonaufnahmen und mehr.</p>
+                    <span class="rules-read-more">Mehr erfahren →</span>
+                </a>
+            </div>
+            <div class="rules-cta">
+                <a href="rules.html" class="btn-primary">Alle Regeln lesen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HIGH SCORE HUNT</h3>
+                    <p>Das ultimative VR-Turnier 2025</p>
+                    <p class="location">Finale in Köln<br>10.000€ Preisgeld</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Turnier</h4>
+                    <ul>
+                        <li><a href="#locations">Standorte</a></li>
+                        <li><a href="#tournament">Turnier-System</a></li>
+                        <li><a href="#rules">Spielregeln</a></li>
+                        <li><a href="#register">Anmeldung</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#organizers">Veranstalter</a></li>
+                        <li><a href="#sponsors">Sponsoren</a></li>
+                        <li><a href="mailto:parzival.koop@gmail.de">Kontakt Parzival VR</a></li>
+                        <li><a href="mailto:patrick@diezockstube.de">Kontakt Zockstube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="YouTube">🎬</a>
+                        <a href="#" title="TikTok">🎵</a>
+                        <a href="#" title="Tidal">🎧</a>
+                        <a href="#" title="Houzz">🏠</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HIGH SCORE HUNT. Alle Rechte vorbehalten.</p>
+                <p>Veranstaltet von Parzival VR & Die Zockstube VR</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js">
+        
+    </script>
+</body>
+</html>
