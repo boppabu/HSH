@@ -1258,15 +1258,35 @@ nav, section, footer {
 }
 
 @media (max-width: 768px) {
+    /* Mobile Navigation - Center logo, hide menu links */
+    .navbar {
+        position: relative;
+        z-index: 1000;
+    }
+
     .navbar .container {
-        flex-direction: column;
-        gap: 16px;
+        justify-content: center;
     }
 
     .nav-links {
-        flex-direction: column;
-        gap: 16px;
-        text-align: center;
+        display: none;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    /* Hero section - ensure proper stacking */
+    .hero {
+        position: relative;
+        z-index: 10;
+        padding-top: 40px;
+        margin-top: 0;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 15;
     }
 
     .hero-title {
@@ -1301,10 +1321,19 @@ nav, section, footer {
         min-height: 48px;
     }
 
-    /* Scale down orbiting keys instead of hiding */
+    /* Scale down orbiting keys and ensure proper positioning */
     .orbiting-keys {
         transform: scale(0.5);
-        margin-bottom: -80px;
+        margin-bottom: -60px;
+        position: relative;
+        z-index: 5;
+    }
+
+    /* Ensure event date is visible */
+    .event-date {
+        position: relative;
+        z-index: 20;
+        margin-top: 20px;
     }
 
     .attendee-grid {
@@ -1358,15 +1387,6 @@ nav, section, footer {
         max-width: 150px !important;
     }
 
-    /* Touch target optimization */
-    .nav-links a {
-        padding: 12px;
-        min-height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     /* Rules page optimization */
     .rule-card {
         padding: 30px 20px;
@@ -1375,10 +1395,24 @@ nav, section, footer {
     .rule-number {
         font-size: 2rem;
     }
+
+    /* All sections ensure proper z-index */
+    section {
+        position: relative;
+        z-index: 10;
+    }
 }
 
 /* Mobile - Small phones (480px and below) */
 @media (max-width: 480px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding-top: 30px;
+    }
+
     .hero-title {
         font-size: 32px;
         line-height: 1.2;
@@ -1408,7 +1442,7 @@ nav, section, footer {
     /* Further scale down orbiting keys */
     .orbiting-keys {
         transform: scale(0.4);
-        margin-bottom: -100px;
+        margin-bottom: -80px;
     }
 
     /* Optimize sponsor logos */
@@ -1449,6 +1483,18 @@ nav, section, footer {
 
 /* Mobile - Very small phones (375px and below) */
 @media (max-width: 375px) {
+    .logo {
+        font-size: 16px;
+    }
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .hero {
+        padding-top: 20px;
+    }
+
     .hero-title {
         font-size: 28px;
     }
@@ -1473,7 +1519,7 @@ nav, section, footer {
     /* Scale orbiting keys even smaller */
     .orbiting-keys {
         transform: scale(0.35);
-        margin-bottom: -110px;
+        margin-bottom: -90px;
     }
 
     /* Container padding */
@@ -1497,6 +1543,18 @@ nav, section, footer {
 
 /* Mobile - Extra small (320px) */
 @media (max-width: 320px) {
+    .logo {
+        font-size: 14px;
+    }
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .hero {
+        padding-top: 15px;
+    }
+
     .hero-title {
         font-size: 24px;
     }
@@ -1505,22 +1563,14 @@ nav, section, footer {
         font-size: 22px;
     }
 
-    /* Hide orbiting keys on very small screens */
+    /* Scale orbiting keys to minimum size */
     .orbiting-keys {
         transform: scale(0.3);
-        margin-bottom: -120px;
+        margin-bottom: -100px;
     }
 
     .stat-number {
         font-size: 24px;
-    }
-
-    .nav-links {
-        gap: 12px;
-    }
-
-    .nav-links a {
-        font-size: 14px;
     }
 }
 
