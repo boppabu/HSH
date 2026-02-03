@@ -286,6 +286,8 @@ nav, section, footer {
     background: var(--gradient-primary);
     color: var(--bg-black);
     box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
+    font-size: 1.1rem;
+    padding: 16px 40px;
 }
 
 .btn-primary:hover {
@@ -526,10 +528,11 @@ nav, section, footer {
 
 .attendee-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
+    justify-items: center;
 }
 
 .attendee-card {
@@ -545,6 +548,11 @@ nav, section, footer {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    width: 100%;
+    max-width: 280px;
+    min-height: 200px;
+    text-decoration: none;
+    color: inherit;
 }
 
 .attendee-card::before {
