@@ -528,9 +528,9 @@ nav, section, footer {
 
 .attendee-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    max-width: 1300px;
+    max-width: 1000px;
     margin: 0 auto;
     justify-items: center;
 }
