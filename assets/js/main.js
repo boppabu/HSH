@@ -116,12 +116,16 @@ class ParticleNetwork {
         this.canvas = canvas;
         this.ctx = canvas.getContext('2d');
         this.particles = [];
-        this.particleCount = 100;
-        this.maxDistance = 150;
+
+        // Reduce particle count on mobile for better performance
+        this.isMobile = window.innerWidth <= 768;
+        this.particleCount = this.isMobile ? 40 : 100;
+        this.maxDistance = this.isMobile ? 100 : 150;
+
         this.mouse = {
             x: null,
             y: null,
-            radius: 180
+            radius: this.isMobile ? 120 : 180
         };
         this.perlin = new PerlinNoise();
         this.time = 0;
@@ -130,6 +134,7 @@ class ParticleNetwork {
 
         console.log('ParticleNetwork constructor called');
         console.log('Canvas dimensions:', canvas.width, 'x', canvas.height);
+        console.log('Mobile mode:', this.isMobile, 'Particle count:', this.particleCount);
 
         this.setupEventListeners();
         this.resize();
@@ -140,6 +145,17 @@ class ParticleNetwork {
     resize() {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
+
+        // Update mobile detection and particle count on resize
+        const wasMobile = this.isMobile;
+        this.isMobile = window.innerWidth <= 768;
+
+        if (wasMobile !== this.isMobile) {
+            this.particleCount = this.isMobile ? 40 : 100;
+            this.maxDistance = this.isMobile ? 100 : 150;
+            this.mouse.radius = this.isMobile ? 120 : 180;
+        }
+
         this.init(); // Reinitialize particles after resize
     }
 
